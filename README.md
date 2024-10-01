@@ -1,4 +1,4 @@
-# Sistema de Monitoramento Remoto Utilizando Tecnologia LoRa
+# Sistema para Aquisição e Monitoramento de Dados Utilizando Tecnologia Lora
 
 ## Descrição do Projeto
 
