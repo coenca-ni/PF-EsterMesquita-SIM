@@ -1,6 +1,6 @@
 # Sistema para Aquisição e Monitoramento de Dados Utilizando Tecnologia LoRa
 
-![SIM](04-Imagens/SIM.webp)
+![SIM](04-Imagens/SIM.png)
 
 ## Descrição do Projeto
 
@@ -10,7 +10,7 @@ Este projeto é um protótipo de monitoramento de variáveis ambientais utilizan
 
 O sistema utiliza microcontroladores ESP32 e Arduino Nano para coletar dados de diversos sensores (temperatura, umidade, pressão, entre outros) e transmitir essas informações. Os dados são armazenados em um banco de dados no Firebase e podem ser acessados em tempo real através de um aplicativo de monitoramento. Além disso, o sistema possui integração com a plataforma ThingSpeak para visualização gráfica dos dados.
 
-![Arquitetura do Sistema](04-Imagens/ArquiteturaDoSistema.png)
+![Arquitetura do Sistema](04-Imagens/ArquiteturaDoSistema (1).png)
 
 Este repositório contém os códigos-fonte do projeto, bem como tutoriais detalhados para a conexão dos componentes, configuração do LoRa e aplicativo de monitoramento.
 
