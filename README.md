@@ -1,5 +1,6 @@
 # Sistema para Aquisição e Monitoramento de Dados Utilizando Tecnologia LoRa
 
+
 ![SIM 1080x1080](04-Imagens/SIM (1080 x 1080 px).gif)
 
 ## Descrição do Projeto
