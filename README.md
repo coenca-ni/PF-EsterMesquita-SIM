@@ -1,6 +1,6 @@
 # Sistema para Aquisição e Monitoramento de Dados Utilizando Tecnologia LoRa
 
-![SIM](04-Imagens/SIM.webp)
+![SIM](04-Imagens/SIM.png)
 
 ## Descrição do Projeto
 
