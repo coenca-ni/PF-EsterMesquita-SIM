@@ -61,7 +61,7 @@ struct PACOTE {
   float Umid;
   bool Chuva;
   byte IndiceUV;
-  unsigned long tempoEnvio;
+
 };
 
 
@@ -97,16 +97,13 @@ const char *minhaChaveEscritaAPI = "DVYHJ95R7M9R68FP"; // Chave API do ThingSpea
 int ultimoContadorRecebido = 0;
 unsigned long pacotesPerdidos = 0;
 unsigned long pacotesRecebidos = 0;
-// Variável para guardar a diferença de tempo entre transmissor e receptor
-unsigned long diferencaTempo = 0;
+
 bool sincronizado = false;
 float taxaPerdaPacotes = 0.0;
 float qualidadeTransmissao;
-unsigned long tempoRecebimento;
-unsigned long latencia;
-float latenciaFloat;
 int buscadados = 0; //get struct do firebase 
 int qtdbuscaAceitavel = 5; //após tentar normalizar a leitura X vezes e não conseguir
+unsigned long tempoRecebimento;
 
 
 // Função para definir a cor do LED RGB
@@ -222,18 +219,7 @@ void loop() {
 
     // Captura o tempo de recepção
     tempoRecebimento = millis();  // Tempo atual no receptor  
-    if(!sincronizado){
-      diferencaTempo = tempoRecebimento - dados.tempoEnvio; // Define a diferença entre transmissor e receptor
-      sincronizado = true;
-      Serial.println("Tempos sincronizados.");
-
-    }  
-
-    // Calcula a latência
-    latencia = (tempoRecebimento - diferencaTempo) - dados.tempoEnvio;
-    pacotesRecebidos++;
-    
-    
+   
       
     // Atualiza o contador de pacotes recebidos
     
@@ -477,13 +463,7 @@ void enviarParaFirebase() {
       Serial.println("Falha ao enviar a Qualidade de Transmissão de Pacotes para o Firebase.");
     }
 
-    // Envia a qualidade de transmissão para o Firebase
-    latenciaFloat = (float)latencia;  // Converter latência para float
-    if (Firebase.RTDB.setFloat(&fbdo, "/sensores/ar/latencia", latenciaFloat)) {
-    Serial.println("Latência enviada para o Firebase.");
-    }else {
-    Serial.println("Falha ao enviar Latência para o Firebase.");
-    }
+ 
 
     // Envia o status da Qualidade de Transmissão para o Firebase
     if (Firebase.RTDB.setString(&fbdo, "/sensores/ar/statusQualidade", statusQualidade)) {
@@ -517,7 +497,7 @@ void enviarParaThingSpeak() {
   ThingSpeak.setField(5, dados.Chuva); //FIELD 5 -> STATUS CHUVA 
   ThingSpeak.setField(6, taxaPerdaPacotes); //FIELD 6 -> TAXA DE PERDA DE PACOTES
   ThingSpeak.setField(7, qualidadeTransmissao); //FIELD 7 -> QUALIDADE DE TRANSMISSÃO
-  ThingSpeak.setField(8, latenciaFloat); //FIELD 8 -> LATENCIA DE TRANSMISSÃO
+
 
   int x = ThingSpeak.writeFields(meuNumeroCanal, minhaChaveEscritaAPI);
   if (x == 200) {

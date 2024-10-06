@@ -60,7 +60,7 @@ struct PACOTE {
   float Umid;
   bool Chuva;
   byte IndiceUV;
-  unsigned long tempoEnvio;
+
 };
 
 //Estrutura para armazenar e enviar dados vindos do Firebase para resetar o sistema
@@ -161,9 +161,6 @@ void loop() {
   indiceUV = map(leituraUV, 0,203,0,10) ; // CONVERTE A FAIXA DE SINAL DO SENSOR DE 0V A 1V PARA O INDICE UV DE 0 A 10.
   dados.IndiceUV = indiceUV;
 
-  // Cap  tura o tempo antes de enviar
-  
-  dados.tempoEnvio = millis();  // Tempo em milissegundos desde que o sistema foi ligado
 
   //Envia a Estrutura (Pacote)
   Lora.SendStruct(&dados, sizeof(dados));
@@ -195,8 +192,6 @@ void loop() {
   Serial.print("Enviando pacote número: "); 
   Serial.println(dados.Contador);
 
-  Serial.print("Tempo de envio (ms): "); 
-  Serial.println(dados.tempoEnvio);
 
   Serial.println("Enviado!");
 
