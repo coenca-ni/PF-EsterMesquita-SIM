@@ -1,16 +1,16 @@
 # Sistema para Aquisição e Monitoramento de Dados Utilizando Tecnologia LoRa
 
-![SIM](04-Imagens/SIM.png)
+![SIM](03-Imagens/SIM.png)
 
 ## Descrição do Projeto
 
 Este projeto é um protótipo de monitoramento de variáveis ambientais utilizando a tecnologia LoRa para comunicação de longa distância. Ele foi desenvolvido com o objetivo de fornecer uma solução de baixo custo para monitoramento remoto em áreas como agricultura, controle ambiental e estações meteorológicas.
 
-![Proposta de Sistema](04-Imagens/PropostadeSistema.png)
+![Proposta de Sistema](03-Imagens/PropostadeSistema.png)
 
 O sistema utiliza microcontroladores ESP32 e Arduino Nano para coletar dados de diversos sensores (temperatura, umidade, pressão, entre outros) e transmitir essas informações. Os dados são armazenados em um banco de dados no Firebase e podem ser acessados em tempo real através de um aplicativo de monitoramento. Além disso, o sistema possui integração com a plataforma ThingSpeak para visualização gráfica dos dados.
 
-![Arquitetura do Sistema](04-Imagens/ArquiteturaDoSistema.png)
+![Arquitetura do Sistema](03-Imagens/ArquiteturaDoSistema.png)
 
 Este repositório contém os códigos-fonte do projeto, bem como tutoriais detalhados para a conexão dos componentes, configuração do LoRa e aplicativo de monitoramento.
 
@@ -38,23 +38,23 @@ Este repositório contém os códigos-fonte do projeto, bem como tutoriais detal
 ### Transmissor
 O transmissor coleta dados dos sensores e os envia via LoRa para o receptor.
 
-![Transmissor Passo a Passo](04-Imagens/transmissor_passoapasso.png)
+![Transmissor Passo a Passo](03-Imagens/transmissor_passoapasso.png)
 
 ### Receptor
 O receptor recebe os dados do transmissor e os encaminha para o Firebase e o ThingSpeak.
 
-![Receptor Passo a Passo](04-Imagens/receptor_passoapasso.png)
+![Receptor Passo a Passo](03-Imagens/receptor_passoapasso.png)
 
 ## Testes de Distância (comunicação bem sucedida)
 
 ### Ponto A
-![Ponto A](04-Imagens/pontoA.png)
+![Ponto A](03-Imagens/pontoA.png)
 
 ### Ponto B
-![Ponto B](04-Imagens/pontoB.png)
+![Ponto B](03-Imagens/pontoB.png)
 
 ### Ponto C
-![Ponto C](04-Imagens/pontoC.png)
+![Ponto C](03-Imagens/pontoC.png)
 
 ### Transmissão no Ponto C
-![Transmissão no Ponto C](04-Imagens/pontoC_transmissao.png)
+![Transmissão no Ponto C](03-Imagens/pontoC_transmissao.png)
