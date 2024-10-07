@@ -44,3 +44,17 @@ O transmissor coleta dados dos sensores e os envia via LoRa para o receptor.
 O receptor recebe os dados do transmissor e os encaminha para o Firebase e o ThingSpeak.
 
 ![Receptor Passo a Passo](04-Imagens/receptor_passoapasso.png)
+
+## Testes de Distância realizados
+
+### Ponto A
+![Ponto A](04-Imagens/pontoA.png)
+
+### Ponto B
+![Ponto B](04-Imagens/pontoB.png)
+
+### Ponto C
+![Ponto C](04-Imagens/pontoC.png)
+
+### Transmissão no Ponto C
+![Transmissão no Ponto C](04-Imagens/pontoC_transmissao.png)
