@@ -37,16 +37,15 @@ Os gráficos ilustram a taxa de perda de pacotes original e após a filtragem.
 ## Uso dos Códigos MATLAB
 
 Cada script MATLAB realiza o seguinte:
-1. **Leitura dos Dados**: Os dados de entrada são lidos a partir de arquivos CSV ou diretamente de variáveis.
-2. **Aplicação dos Filtros**: Filtros de Média Móvel e Mediana são aplicados para suavizar os dados.
+1. **Leitura dos Dados**: Os dados de entrada são lidos a partir do arquivo SIM.csv.
+2. **Aplicação dos Filtros**: Filtros de Média Móvel e Mediana são aplicados no código.
 3. **Geração dos Gráficos**: Gráficos são gerados para comparar os dados originais com os dados filtrados.
 
 ### Exemplo de Uso:
-Para processar os dados de umidade e gerar gráficos com o filtro de Média Móvel e Mediana, execute o código `process_umidade.m`.
+Para processar os dados de umidade e gerar gráficos com o filtro de Média Móvel e Mediana, execute o código `Umidade.m` para visualizar os testes realizados no ponto A, por exemplo.
 
 ## Observações
 - Certifique-se de ter os arquivos de dados na mesma pasta dos scripts MATLAB.
-- Os gráficos são salvos automaticamente no diretório após a execução dos scripts.
 - É recomendável utilizar MATLAB R2021a ou superior para garantir compatibilidade.
 
 Para mais informações, consulte os scripts MATLAB disponíveis nesta pasta.
