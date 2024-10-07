@@ -123,6 +123,7 @@ if (qualidadeTransmissao >= 67) {
 
 A função `enviarParaFirebase()` formata e envia os dados dos sensores para o banco de dados em tempo real:
 
+
 ```cpp
 void enviarParaFirebase() {
     temperaturaString = String(dados.Temp) + "°C";
@@ -162,7 +163,7 @@ void enviarParaThingSpeak() {
     ThingSpeak.setField(5, dados.Chuva);
     ThingSpeak.setField(6, taxaPerdaPacotes);
     ThingSpeak.setField(7, qualidadeTransmissao);
-    ThingSpeak.setField(8, latenciaFloat);
+   
     
     int x = ThingSpeak.writeFields(meuNumeroCanal, minhaChaveEscritaAPI);
     if (x == 200) {
