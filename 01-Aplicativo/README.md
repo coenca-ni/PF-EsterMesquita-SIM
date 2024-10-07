@@ -8,3 +8,9 @@ Este diretório contém a programação em blocos do aplicativo desenvolvida uti
 - **Controle de Conectividade**: Blocos responsáveis por gerenciar conexões WiFi e resetar o sistema em caso de perda de conexão.
 - **Notificações**: Blocos que exibem mensagens ao usuário para indicar ações necessárias, como conexão à rede WiFi.
 - **Animações e Interações**: Blocos que configuram animações e interações para melhorar a experiência do usuário.
+
+## Telas
+Na pasta tela estão contidos exemplos dos resultados da elaboração das telas através do design do aplicativo Kodular.
+
+## Ícones e outras Imagens
+Nesta pasta estão contidos os ícones e imagens utilizados no aplicativo.
