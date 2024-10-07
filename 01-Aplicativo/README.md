@@ -9,23 +9,8 @@ Este diretório contém a programação em blocos do aplicativo desenvolvida uti
 - **Notificações**: Blocos que exibem mensagens ao usuário para indicar ações necessárias, como conexão à rede WiFi.
 - **Animações e Interações**: Blocos que configuram animações e interações para melhorar a experiência do usuário.
 
+## Telas
+Na pasta tela estão contidos exemplos dos resultados da elaboração das telas através do design do aplicativo Kodular.
 
-![Bloco de Navegação](Blocos/blocks.png)
-
-![Bloco de Controle de Conectividade](Blocos/blocks (1).png)
-
-![Bloco de Controle de Conectividade](Blocos/blocks (2).png)
-
-![Bloco de Controle de Conectividade](Blocos/blocks (3).png)
-
-![Bloco de Notificações](Blocos/blocks (4).png)
-
-![Bloco de Animações e Interações](Blocos/blocks (5).png)
-
-![Bloco de Animações e Interações](Blocos/blocks (6).png)
-
-![Configurações de Rede e Sistema](Blocos/blocks (7).png)
-
-![Configurações de Rede e Sistema](Blocos/blocks (8).png)
-
-![Controle de Slider](Blocos/blocks (9).png)
+## Ícones e outras Imagens
+Nesta pasta estão contidos os ícones e imagens utilizados no aplicativo.
