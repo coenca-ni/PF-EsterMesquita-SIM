@@ -45,7 +45,7 @@ O receptor recebe os dados do transmissor e os encaminha para o Firebase e o Thi
 
 ![Receptor Passo a Passo](04-Imagens/receptor_passoapasso.png)
 
-## Testes de Distância realizados
+## Testes de Distância (comunicação bem sucedida)
 
 ### Ponto A
 ![Ponto A](04-Imagens/pontoA.png)
