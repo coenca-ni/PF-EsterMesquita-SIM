@@ -51,7 +51,7 @@ struct PACOTE {
   float Umid;
   bool Chuva;
   byte IndiceUV;
-  unsigned long tempoEnvio;
+  
 };
 
 struct RESET {
@@ -68,7 +68,7 @@ EBYTE Lora(&SerialLora, M0, M1, AX);
 - **DHTPINO (7)**: Define o pino ao qual o sensor DHT22 está conectado.
 - **sensorChuva (8)**: Define o pino para o sensor de chuva.
 - **pinSensorUV (A0)**: Pino analógico para o sensor de radiação UV.
-- **PACOTE**: Estrutura que define os dados a serem enviados, como contador, pressão, temperatura, umidade, chuva, índice UV, e tempo de envio.
+- **PACOTE**: Estrutura que define os dados a serem enviados, como contador, pressão, temperatura, umidade, chuva e índice UV.
 - **SerialLora**: Configura a comunicação serial nos pinos RX e TX para o módulo LoRa.
 - **EBYTE Lora**: Inicializa a biblioteca para o módulo LoRa com os pinos de controle M0, M1 e AX.
 
@@ -159,7 +159,7 @@ void loop() {
   indiceUV = map(leituraUV, 0, 203, 0, 10);
   dados.IndiceUV = indiceUV;
 
-  dados.tempoEnvio = millis();
+  
   Lora.SendStruct(&dados, sizeof(dados));
 
   Serial.print("Temperatura enviada: ");
@@ -181,9 +181,6 @@ void loop() {
   Serial.print("Enviando pacote número: ");
   Serial.println(dados.Contador);
 
-  Serial.print("Tempo de envio (ms): ");
-  Serial.println(dados.tempoEnvio);
-
   Lora.GetStruct(&reinicia, sizeof(reinicia));
   if (reinicia.resetArduino == 1) {
     Serial.println("Recebido comando de reset! Resetando Arduino...");
@@ -201,6 +198,5 @@ void loop() {
 - **digitalRead(pinoSensorChuva)**: Lê o valor do sensor de chuva (LOW indica presença de chuva).
 - **bmp.readPressure()**: Lê o valor da pressão atmosférica do sensor BMP180, convertendo para hPa.
 - **analogRead(pinSensorUV)**: Lê o valor do sensor de UV e o converte para o índice UV.
-- **dados.tempoEnvio = millis()**: Armazena o tempo em milissegundos desde que o Arduino foi iniciado.
 - **Lora.SendStruct()**: Envia a estrutura de dados via LoRa.
 - **Lora.GetStruct()**: Verifica se um comando de reset foi recebido. Caso positivo, o Arduino é reiniciado.
