@@ -60,7 +60,7 @@ struct PACOTE {
   float Umid;
   bool Chuva;
   byte IndiceUV;
-  unsigned long tempoEnvio;
+
 };
 ```
 
